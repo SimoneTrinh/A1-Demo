@@ -58,7 +58,10 @@ public class StockData implements Comparable<StockData> {
     }
 
     @Override
-    public int compareTo(StockData stockData) {
-        return new Double(lastDone).compareTo(stockData.lastDone);
+//    public int compareTo(StockData stockData) {
+////        return new Double(lastDone).compareTo(stockData.lastDone);
+////    }
+    public int compare(StockData s1, StockData s2) {
+        return Double.compare(s1.getChange(), s2.getChange());
     }
 }
